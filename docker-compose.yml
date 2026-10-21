@@ -1,0 +1,9 @@
+services:
+  card-management-web:
+    build: .
+    container_name: card-management-web
+    ports:
+      - "5040:5030"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
